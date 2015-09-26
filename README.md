@@ -1,0 +1,2 @@
+# HackerCup
+Hacker Cup exercises
