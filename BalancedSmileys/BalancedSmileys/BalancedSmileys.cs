@@ -10,7 +10,6 @@ namespace BalancedSmileys
     {
         public static Boolean AreSmileysBalanced(string inputString)
         {
-            
             Int32 openParenthesis = 0;
 
             for (int i = 0; i < inputString.Length; i++)
@@ -21,16 +20,17 @@ namespace BalancedSmileys
                         openParenthesis++;
                 }
                 else if (inputString[i] == ')')
-                {        
+                {
                     if (i == 0 || inputString[i - 1] != ':')
+                    {
                         openParenthesis--;
-                    if(openParenthesis < 0)
-                        break;
+
+                        if (openParenthesis < 0)
+                            break;
+                    }    
                 }
             }
-
-            return openParenthesis == 0;
-                
+            return openParenthesis == 0;        
         }
 
     }
